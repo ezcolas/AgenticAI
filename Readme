@@ -1,0 +1,55 @@
+# agenticAI
+
+Small Python experiments for learning how to build AI agents with the OpenAI API.
+
+## Scripts
+
+| File | What it does |
+| --- | --- |
+| `hello_agent.py` | Sends one greeting to `gpt-4o-mini` and prints the reply, then runs the same task loop as `mini_agent_loop.py`. |
+| `mini_agent_loop.py` | A minimal agent loop: goes through a fixed list of tasks (`search weather`, `do math`, `summarize text`), sends each one to the model, and prints the response. |
+
+## Requirements
+
+- Python 3.12
+- An OpenAI API key
+
+## Setup
+
+1. Create and activate a virtual environment:
+
+   ```bash
+   python3 -m venv agentic_venv
+   source agentic_venv/bin/activate
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   pip install openai python-dotenv
+   ```
+
+3. Create a `.env` file in the project root with your API key:
+
+   ```
+   OPENAI_API_KEY=your-key-here
+   ```
+
+   Don't commit `.env` to version control.
+
+## Usage
+
+With the virtual environment active:
+
+```bash
+python hello_agent.py
+python mini_agent_loop.py
+```
+
+Each script prints the task it sent and the model's reply.
+
+## Next steps
+
+- Let the model choose which task or tool to run, instead of following a fixed list.
+- Add real tools (a weather API, a calculator) that the agent can call.
+- Keep conversation history so the agent can build on earlier answers.
