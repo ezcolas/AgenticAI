@@ -1,2 +1,5 @@
 .env
 agentic_venv/
+agent_notes.txt
+agent_tools.txt
+tasks.json
